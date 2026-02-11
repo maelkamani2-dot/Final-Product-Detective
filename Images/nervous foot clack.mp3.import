@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dtwgucx5hm5iu"
+path="res://.godot/imported/nervous foot clack.mp3-7ef1405d7ed9556b77e88779954a4572.mp3str"
+
+[deps]
+
+source_file="res://Images/nervous foot clack.mp3"
+dest_files=["res://.godot/imported/nervous foot clack.mp3-7ef1405d7ed9556b77e88779954a4572.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

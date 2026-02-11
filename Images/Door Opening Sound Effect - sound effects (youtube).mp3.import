@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c5pyxdoxmqyxl"
+path="res://.godot/imported/Door Opening Sound Effect - sound effects (youtube).mp3-4e5c817552392d2ec19fbcd3f343d33c.mp3str"
+
+[deps]
+
+source_file="res://Images/Door Opening Sound Effect - sound effects (youtube).mp3"
+dest_files=["res://.godot/imported/Door Opening Sound Effect - sound effects (youtube).mp3-4e5c817552392d2ec19fbcd3f343d33c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

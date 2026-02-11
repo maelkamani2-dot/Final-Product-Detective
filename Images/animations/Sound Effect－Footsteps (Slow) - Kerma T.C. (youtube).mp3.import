@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cuhfu0qyn0ndh"
+path="res://.godot/imported/Sound Effect－Footsteps (Slow) - Kerma T.C. (youtube).mp3-5383e77922b59b59a1b79e9ce893a78c.mp3str"
+
+[deps]
+
+source_file="res://Images/animations/Sound Effect－Footsteps (Slow) - Kerma T.C. (youtube).mp3"
+dest_files=["res://.godot/imported/Sound Effect－Footsteps (Slow) - Kerma T.C. (youtube).mp3-5383e77922b59b59a1b79e9ce893a78c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

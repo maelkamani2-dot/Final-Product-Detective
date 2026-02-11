@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=3 uid="uid://pp_introduction_scene"]
+
+[ext_resource type="Script" path="res://scenes/pp_introduction.gd" id="1_pp_intro"]
+
+[node name="PPIntroduction" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pp_intro")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1, 0.1, 0.12, 1)
+
+[node name="IntroductionText" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = -50.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "My name is Mael Teddy Kamani, a Secondary 5 student at Lucille-Teasdale International School.
+
+For this project, I created a detective game focused on non-verbal communication. In this story, players must observe characters closely, read their gestures, and uncover the hidden truth behind their actions.
+
+Non-verbal communication is one of the most powerful tools we have. More than words, it reveals emotions, intentions, and secrets people try to hide. A simple glance, a change in posture, or a nervous movement can completely transform the meaning of a conversation.
+
+Through this game, my goal is to help you understand how body language shapes interactions, influences relationships, and plays a key role in solving mysteries.
+
+Pay attention—every detail matters.
+
+Welcome to the investigation."
+autowrap_mode = 3
+scroll_following = false
+
+[node name="ContinueButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -170.0
+offset_top = -60.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 24
+text = "Continue"
+
+
+
+
+
+
+
+
+
+
+

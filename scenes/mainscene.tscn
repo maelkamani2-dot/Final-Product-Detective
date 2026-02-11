@@ -1,0 +1,205 @@
+[gd_scene load_steps=7 format=3 uid="uid://dw8bccncok3bs"]
+
+[ext_resource type="Texture2D" uid="uid://5ydwbxfqdgat" path="res://Images/Lucid_Origin_2D_pixelated_character_with_a_classic_detective_a_1.png" id="1_xtb1e"]
+[ext_resource type="Script" uid="uid://def6dvivvtboh" path="res://sprites/player.gd" id="2_dn5c8"]
+[ext_resource type="Script" uid="uid://dag5a0cbdp2tx" path="res://scenes/mainscene.gd" id="3_mainscene"]
+[ext_resource type="Texture2D" uid="uid://02ou4r30t87r" path="res://Images/gemini-2.5-flash-image_so_same_thing_same_style_so_2d_8_bit_but_i_want_u_to_remove_the_guy_on_the_left_-0 (1).jpg" id="4_bg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(100, 120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3"]
+size = Vector2(150, 150)
+
+[node name="Mainscene" type="Node2D"]
+script = ExtResource("3_mainscene")
+
+[node name="InstructionsLayer" type="CanvasLayer" parent="."]
+
+[node name="InstructionsPanel" type="Control" parent="InstructionsLayer"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 520.0
+offset_bottom = 140.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="InstructionsLabel" type="Label" parent="InstructionsLayer/InstructionsPanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = -40.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 18
+text = "Use the arrow keys to move your character.
+Interact with the book to access tips on non-verbal communication.
+Once you have finished reviewing the information, proceed to the door to continue."
+autowrap_mode = 3
+
+[node name="Player" type="Sprite2D" parent="."]
+z_index = 10
+position = Vector2(168, 789.00006)
+scale = Vector2(0.6779207, 0.7094157)
+texture = ExtResource("1_xtb1e")
+script = ExtResource("2_dn5c8")
+
+[node name="Book" type="Area2D" parent="."]
+z_index = 2
+position = Vector2(814, 759)
+
+[node name="BookSprite" type="Node2D" parent="Book"]
+
+[node name="BookBack" type="ColorRect" parent="Book/BookSprite"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -40.0
+offset_right = 30.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.35, 0.25, 0.15, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="BookFront" type="ColorRect" parent="Book/BookSprite"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.0
+offset_top = -38.0
+offset_right = 28.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.45, 0.35, 0.25, 1)
+
+[node name="BookSpine" type="ColorRect" parent="Book/BookSprite"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -40.0
+offset_right = 2.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.25, 0.15, 0.1, 1)
+
+[node name="BookPages" type="ColorRect" parent="Book/BookSprite"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.0
+offset_top = -36.0
+offset_right = 26.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.95, 0.92, 0.88, 1)
+
+[node name="BookLines" type="Node2D" parent="Book/BookSprite"]
+
+[node name="Line1" type="ColorRect" parent="Book/BookSprite/BookLines"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -30.0
+offset_right = 24.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.7, 0.7, 0.7, 0.3)
+
+[node name="Line2" type="ColorRect" parent="Book/BookSprite/BookLines"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -10.0
+offset_right = 24.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.7, 0.7, 0.7, 0.3)
+
+[node name="Line3" type="ColorRect" parent="Book/BookSprite/BookLines"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = 10.0
+offset_right = 24.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.7, 0.7, 0.7, 0.3)
+
+[node name="Line4" type="ColorRect" parent="Book/BookSprite/BookLines"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = 30.0
+offset_right = 24.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.7, 0.7, 0.7, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Book"]
+shape = SubResource("RectangleShape2D_1")
+
+[node name="InterrogationZone" type="Area2D" parent="."]
+z_index = 1
+position = Vector2(1482, 665)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InterrogationZone"]
+z_index = 1
+shape = SubResource("RectangleShape2D_3")
+
+[node name="environnement baclground" type="Sprite2D" parent="."]
+position = Vector2(959.5002, 538.3125)
+scale = Vector2(1.4248513, 1.3950195)
+texture = ExtResource("4_bg")

@@ -1,0 +1,82 @@
+[gd_scene load_steps=2 format=3 uid="uid://brkuogdkysqd"]
+
+[ext_resource type="Script" uid="uid://g34rwuf2lbi0" path="res://scenes/interrogation_introduction.gd" id="1_intro"]
+
+[node name="InterrogationIntroduction" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_intro")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1, 0.1, 0.12, 1)
+
+[node name="IntroductionText" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = -50.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "A coordinated robbery has taken place, and the entire group of suspects is now under investigation. Your task is to evaluate each member of the group and determine who participated, and who might be innocent.
+
+
+Earlier this evening, a team of thieves broke into Riverside Electronics, stealing high-value items before escaping in under three minutes. Witnesses reported seeing two individuals working together.
+
+
+
+
+All 5 suspects claim they don't know each other.
+
+Your job is to analyze their behavior, compare their stories, and uncover the truth behind the robbery.
+
+
+Evaluate each suspect carefully—some may be hiding more than others.
+
+Good luck, detective.
+By clicking the book"
+
+[node name="OfficeButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -60.0
+offset_right = 170.0
+offset_bottom = -20.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 24
+text = "Office"
+
+[node name="ContinueButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -170.0
+offset_top = -60.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 24
+text = "Continue"

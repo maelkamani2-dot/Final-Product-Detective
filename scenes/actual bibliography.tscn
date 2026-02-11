@@ -1,0 +1,104 @@
+[gd_scene load_steps=2 format=3 uid="uid://beq5qc77uy0bk"]
+
+[ext_resource type="Script" path="res://scenes/bibliography.gd" id="1_bibliography"]
+
+[node name="Bibliography" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bibliography")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.051950604, 0.057947822, 0.37390596, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -350.0
+offset_right = 500.0
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 36
+text = "Bibliography"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="ReferencesText" type="RichTextLabel" parent="VBoxContainer/Panel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "Former FBI Agent Explains How to Read Body Language | Tradecraft | WIRED. (n.d.). YouTube.
+    https://www.youtube.com/watch?v=4jwUXV4QaTw
+
+  Liu, L., Gao, L., Lei, W., Ma, F., Lin, X., & Wang, J. (2023). A survey on deep multi-modal learning for body language recognition and generation. arXiv.
+    https://arxiv.org/abs/2308.08849
+
+  Mental Health First Aid. (2018, June 18). 6 ways to improve your non-verbal communication skills.
+    https://mentalhealthfirstaid.org/news/6-ways-to-improve-your-non-verbal-communication-skills/
+
+  Patterson, M. L., Fridlund, A. J., & Crivelli, C. (2023). Four misconceptions about nonverbal communication. Perspectives on Psychological Science, 18(6), 1388–1411.
+    https://doi.org/10.1177/17456916221148142
+
+  Raising Children Network. (2024, June 17). Nonverbal communication: Body language and tone of voice.
+    https://raisingchildren.net.au/toddlers/connecting-communicating/communicating/nonverbal-communication
+
+  Segal, J., Smith, M., Robinson, L., & Boose, G. (n.d.). Body language and nonverbal communication: Communicating without words. HelpGuide.
+    https://www.helpguide.org/relationships/communication/nonverbal-communication
+
+  The Power of Deciphering People’s Nonverbal Cues. (n.d.). YouTube.
+    https://www.youtube.com/watch?v=4RoMQpP7-TQ
+
+  Urakami, J., & Seaborn, K. (2023). Nonverbal cues in human-robot interaction: A communication studies perspective. arXiv.
+    https://arxiv.org/abs/2304.11293
+
+  Verywell Mind. (2025, January 30). 9 types of nonverbal communication.
+    https://www.verywellmind.com/types-of-nonverbal-communication-2795397
+
+  What Is Non-Verbal Communication? (n.d.). YouTube.
+    https://www.youtube.com/watch?v=HxDqYEl20hI"
+fit_content = true
+autowrap_mode = 2
+
+[node name="BackToMenuButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Go Back to Menu"

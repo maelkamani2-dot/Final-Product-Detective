@@ -1,0 +1,347 @@
+[gd_scene load_steps=6 format=3 uid="uid://db8ntaq3i4btg"]
+
+[ext_resource type="Script" uid="uid://bb2js1kl6wcsx" path="res://scenes/interrogation_room.gd" id="1_interrogation"]
+[ext_resource type="Texture2D" uid="uid://b6kehpshcj74j" path="res://Images/unnamed.jpg" id="2_8qb8f"]
+[ext_resource type="Texture2D" uid="uid://dxtv3pqkmv0ek" path="res://Images/animations/Suspect #1 walk 1.png" id="7_walk5_1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
+bg_color = Color(0.1, 0.1, 0.1, 0.9)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.5, 0.5, 0.5, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2"]
+bg_color = Color(0.95, 0.95, 0.9, 0.98)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.3, 0.3, 0.3, 1)
+
+[node name="InterrogationRoom" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_interrogation")
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -60.0
+offset_right = 120.0
+offset_bottom = -20.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "← Back to entrance"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(967.00006, 531)
+scale = Vector2(2.3330052, 2.4327064)
+texture = ExtResource("2_8qb8f")
+
+[node name="Suspect1Container" type="Node2D" parent="."]
+position = Vector2(2395, 725)
+scale = Vector2(1.9739457, 1.9406333)
+
+[node name="Suspect1" type="Sprite2D" parent="Suspect1Container"]
+position = Vector2(32, -49.75)
+scale = Vector2(1.6037736, 1.3995984)
+texture = ExtResource("7_walk5_1")
+
+[node name="Suspect2Container" type="Node2D" parent="."]
+visible = false
+position = Vector2(2000, 400)
+scale = Vector2(1.9739457, 1.9406333)
+
+[node name="Suspect2" type="Sprite2D" parent="Suspect2Container"]
+position = Vector2(32, -49.75)
+scale = Vector2(1.6037736, 1.3995984)
+texture = ExtResource("7_walk5_1")
+
+[node name="Suspect3Container" type="Node2D" parent="."]
+visible = false
+position = Vector2(2000, 400)
+scale = Vector2(1.9739457, 1.9406333)
+
+[node name="Suspect3" type="Sprite2D" parent="Suspect3Container"]
+position = Vector2(32, -49.75)
+scale = Vector2(1.6037736, 1.3995984)
+texture = ExtResource("7_walk5_1")
+
+[node name="Suspect4Container" type="Node2D" parent="."]
+visible = false
+position = Vector2(2000, 400)
+scale = Vector2(1.9739457, 1.9406333)
+
+[node name="Suspect4" type="Sprite2D" parent="Suspect4Container"]
+position = Vector2(32, -49.75)
+scale = Vector2(1.6037736, 1.3995984)
+texture = ExtResource("7_walk5_1")
+
+[node name="Suspect5Container" type="Node2D" parent="."]
+visible = false
+position = Vector2(2000, 400)
+scale = Vector2(1.9739457, 1.9406333)
+
+[node name="Suspect5" type="Sprite2D" parent="Suspect5Container"]
+position = Vector2(32, -49.75)
+scale = Vector2(1.6037736, 1.3995984)
+texture = ExtResource("7_walk5_1")
+
+[node name="DialogueBox" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -200.0
+offset_right = 500.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1")
+
+[node name="DialogueText" type="RichTextLabel" parent="DialogueBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+
+[node name="ContinueButton" type="Button" parent="DialogueBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 420.0
+offset_top = -50.0
+offset_right = 480.0
+offset_bottom = -20.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 16
+text = "Continue"
+
+[node name="ReportPromptBox" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -100.0
+offset_right = 300.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1")
+
+[node name="ReportPromptText" type="Label" parent="ReportPromptBox"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -40.0
+offset_right = 250.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "Are you ready to give back your report?"
+horizontal_alignment = 1
+
+[node name="YesButton" type="Button" parent="ReportPromptBox"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = 20.0
+offset_right = -10.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "Yes"
+
+[node name="NoButton" type="Button" parent="ReportPromptBox"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 10.0
+offset_top = 20.0
+offset_right = 80.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "No"
+
+[node name="ReportDocument" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = -50.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2")
+
+[node name="Title" type="Label" parent="ReportDocument"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 20.0
+offset_right = 200.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "SUSPECT REPORT"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ReportDocument"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -150.0
+offset_right = 350.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SuspectList" type="GridContainer" parent="ReportDocument/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 20
+columns = 2
+
+[node name="ConfirmButton" type="Button" parent="ReportDocument"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -80.0
+offset_right = 120.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 28
+text = "Confirm Choice"
+
+[node name="ResultText" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -100.0
+offset_right = 200.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+
+[node name="BackToMenuButton" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = 40.0
+offset_right = 120.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "Go Back to Menu"
+
+[node name="GameOverExplanation" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = 100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1")
+
+[node name="ExplanationText" type="RichTextLabel" parent="GameOverExplanation"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = -40.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+
+[node name="BackToMenuButtonGameOver" type="Button" parent="GameOverExplanation"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -60.0
+offset_right = 120.0
+offset_bottom = -20.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 24
+text = "Go Back to Menu"
